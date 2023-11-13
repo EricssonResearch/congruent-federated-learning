@@ -1,2 +1,11 @@
-# congruent-federated-learning
-This repository contains the implementation of the congruent federated learning (CFL) to be published at IEEE TMLCN
+# CFL - TMLCN
+
+A demo of CFL for our TMLCN paper.
+
+To run the demo:
+- python -m exp_scripts.exp_fmnist
+
+
+
+
+
