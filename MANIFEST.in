@@ -1,0 +1,1 @@
+recursive-include cfl/data/fg_traces *.pickle

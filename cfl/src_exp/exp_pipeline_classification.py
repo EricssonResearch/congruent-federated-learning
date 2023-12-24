@@ -1,5 +1,5 @@
-from src.boosting_pipeline_classification import *
-from src.models_classifier import MLPClassifier
+from cfl.src.boosting_pipeline_classification import *
+from cfl.src.models_classifier import MLPClassifier
 
 import os
 import torch

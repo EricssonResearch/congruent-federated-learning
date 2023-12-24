@@ -1,8 +1,8 @@
-from src.read_data import *
-from src.agent_model import AgentModel
-from src.federated_averaging import FederatedAveraging, IsolatedTraining
-from tools.performance_evaluator import ClassificationEvaluator as MyClassifierEvaluator
-from tools.convergence_evaluator import NumberOfRounds
+from cfl.src.read_data import *
+from cfl.src.agent_model import AgentModel
+from cfl.src.federated_averaging import FederatedAveraging, IsolatedTraining
+from cfl.tools.performance_evaluator import ClassificationEvaluator as MyClassifierEvaluator
+from cfl.tools.convergence_evaluator import NumberOfRounds
 
 from sklearn.preprocessing import StandardScaler as MyDataNormalizer
 from sklearn.model_selection import train_test_split

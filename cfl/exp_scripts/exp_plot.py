@@ -6,18 +6,25 @@ import matplotlib
 
 
 class ExpPlot(object):
-    def __init__(self, n_agents, task_list, n_rounds, n_runs, epoch_list):
+    def __init__(self, save_path, 
+                n_agents, 
+                task_list,
+                n_rounds,
+                n_runs, 
+                epoch_list, 
+                make_predictions_using_local_model):
+        self.save_path = save_path
         self.n_runs = n_runs
         self.n_agents = n_agents
         self.task_list = task_list
         self.n_rounds = n_rounds
         self.epoch_list = epoch_list
+        self.make_predictions_using_local_model = make_predictions_using_local_model
 
     def __call__(self):
         poi_list = list(np.linspace(0, self.n_rounds - 1, min(10, self.n_rounds), dtype='int'))
         agent_names = [str(_) for _ in range(self.n_agents)]
-
-        main_path = '../results/fmnist/' + 'n_agents_' + str(self.n_agents) + '/'
+        main_path = self.save_path
         fig_path = main_path + 'figs/'
         methods = []
         method_names = {}
@@ -50,7 +57,10 @@ class ExpPlot(object):
                 os.makedirs(fig_path)
             kpi_method = {}
             for method in methods:
-                file_name = method + '__kpi'
+                if method.__contains__('cfl') and self.make_predictions_using_local_model is True:
+                    file_name = method + '_local__kpi'
+                else:
+                    file_name = method + '__kpi'
                 kpi_agent = {}
                 for agent_name in agent_names:
                     kpi_task = {}
@@ -109,8 +119,3 @@ class ExpPlot(object):
             plt.tight_layout()
             plt.savefig(fig_path + task_i + '/poi_' + metric + '.jpg', dpi=1200)
             plt.show()
-
-
-if __name__ == '__main__':
-    ep = ExpPlot(n_agents=10, task_list=['fmnist'], n_rounds=10, n_runs=5, epoch_list=[10, 100, 1000])
-    ep()

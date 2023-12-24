@@ -1,4 +1,4 @@
-import src.congruent_mask as mask
+import cfl.src.congruent_mask as mask
 
 import torch
 from torch import nn
