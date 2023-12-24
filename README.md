@@ -2,7 +2,7 @@
 
 ## Install CFL (Python 3.10.13):
 
-> pip install </path/to/cfl-tmlcn/> -e .
+> ```pip install </path/to/cfl-tmlcn/> -e . ```
 
 ## Input data
 > Save your data per client as a .pickle file
@@ -31,7 +31,7 @@
 
 ### To run the script:
 
-> ''' python -m cfl.exp_scripts.exp_fmnist '''
+> ``` python -m cfl.exp_scripts.exp_fmnist ```
 >> Note: For now data from FMNIST is used as stored in ./cfl/data/fg_traces/
 
 >> Please don't forget to replace with your own data.
