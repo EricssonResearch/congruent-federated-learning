@@ -31,7 +31,7 @@
 
 ### To run the script:
 
-> python -m cfl.exp_scripts.exp_fmnist
+> ''' python -m cfl.exp_scripts.exp_fmnist '''
 >> Note: For now data from FMNIST is used as stored in ./cfl/data/fg_traces/
 
 >> Please don't forget to replace with your own data.
