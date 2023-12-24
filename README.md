@@ -11,7 +11,8 @@
 
 >>> client 1: ./path_to_your_data/1.pickle
 
-> Provide the training data as a nested dict as: ``` data = {'dataset': {'X': np.ndarray, 'Y': np.ndarray}, 'id': str} ```
+> Provide the training data as a nested dict as:
+ ``` data = {'dataset': {'X': np.ndarray, 'Y': np.ndarray}, 'id': str} ```
 >> dataset itself is a dict with keys 'X' and 'Y'
 
 >> 'id' is a string corresponding to the name of the client
