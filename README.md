@@ -11,7 +11,7 @@
 
 >>> client 1: ./path_to_your_data/1.pickle
 
-> Provide the training data as a nested dict as: data = {'dataset': {'X': np.ndarray, 'Y': np.ndarray}, 'id': str}
+> Provide the training data as a nested dict as: ``` data = {'dataset': {'X': np.ndarray, 'Y': np.ndarray}, 'id': str} ```
 >> dataset itself is a dict with keys 'X' and 'Y'
 
 >> 'id' is a string corresponding to the name of the client
@@ -27,11 +27,9 @@
 > CFL generally prefers to have number of epochs per round set to a larger value 
 
 > You can make the final predictions either from the global model or the local model at the clinet side. 
->> This is done by setting "ExpConfig.make_predictions_using_local_model" to True
+>> This is done by setting ``` ExpConfig.make_predictions_using_local_model=True```
 
 ### To run the script:
 
 > ``` python -m cfl.exp_scripts.exp_fmnist ```
->> Note: For now data from FMNIST is used as stored in ./cfl/data/fg_traces/
-
->> Please don't forget to replace with your own data.
+>> Note: Data from FMNIST is used for this demo experiment as stored in ```./cfl/data/fg_traces/```
