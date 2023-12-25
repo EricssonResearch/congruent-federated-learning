@@ -2,7 +2,9 @@
 
 ## Install CFL (Python 3.10.13):
 
-> ```pip install </path/to/cfl-tmlcn/> -e . ```
+> ``` cd congruent-federated-learning ```
+
+> ```pip install -e . ```
 
 ## Input data
 > Save your data per client as a .pickle file
