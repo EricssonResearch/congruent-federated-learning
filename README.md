@@ -1,5 +1,6 @@
 # CFL
 
+> Taghia, Jalil, Farnaz Moradi, Hannes Larsson, Xi Lan, Adam Orucu, Masoumeh Ebrahimi and Andreas Johnsson. “Congruent Learning for Self-Regulated Federated Learning in 6G.” IEEE Transactions on Machine Learning in Communications and Networking 2 (2024): 129-149.
 ## Install CFL (Python 3.10.13):
 
 > ``` cd congruent-federated-learning ```
